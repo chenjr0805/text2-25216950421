@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25216950421陈建任实验二</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <!-- 主播放器区域 -->
+    <div class="main-content">
+        <div class="player-container">
+            <div class="img-container">
+                <img src="./image/王力宏.jpg" alt="封面" id="cover">
+            </div>
+            <div class="song-info">
+                <h2 id="title">音乐播放</h2>
+                <h3 id="artist">作者:陈建任 </h3>
+            </div>
+        </div>
+
+        <!-- 底部控制栏 -->
+        <div class="bottom-controls">
+            <div class="progress-section">
+                <div class="time-display">
+                    <span id="currTime">00:00</span>
+                    <span id="durTime">00:00</span>
+                </div>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev" class="action-btn" title="上一曲"><i class="fas fa-step-backward"></i></button>
+                <button id="play" class="action-btn big" title="播放/暂停"><i class="fas fa-play"></i></button>
+                <button id="next" class="action-btn" title="下一曲"><i class="fas fa-step-forward"></i></button>
+
+                <button id="volume" class="action-btn" title="静音/恢复">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-container" id="volume-container" title="调节音量">
+                    <div class="volume-fill" id="volume-fill"></div>
+                </div>
+                <button id="playlist-btn" class="action-btn" title="播放列表"><i class="fas fa-list"></i></button>
+                <div class="speed-control">1.0X</div>
+                <button id="screen" class="action-btn" title="全屏"><i class="fas fa-expand"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 播放列表侧边栏 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>播放列表</h3>
+            <button id="close-sidebar" class="action-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul id="song-list" class="song-list"></ul>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="audio"></audio>
+
+    <script src="./style/index.js"></script>
+</body>
+</html>
